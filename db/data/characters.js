@@ -678,7 +678,7 @@ export default [
             "The slaying of Sam666"
         ],
         biography: "In the sprawling realm of contemporary kingdoms, there dwells a bard named Ben, whose tales echo through taverns and halls alike. Born amidst the rolling hills of the modern age, his spirit is a fusion of valiant chivalry and boundless creativity. As the dusk settles over the realm, Ben's fingers dance upon the strings of his guitar, conjuring melodies that weave tales of heroism and mystique. His nimble digits, seasoned by the melodies of time, craft harmonies that echo across lands far and wide, enchanting listeners with their allure. Yet, beyond his lyrical prowess, Ben finds solace in the realm of Dungeons & Dragons, where he becomes a maestro orchestrating epic sagas. Clad in imagination's armor, he traverses realms, steering characters through treacherous quests and exhilarating triumphs. His mind, an arsenal of ingenuity and strategy, plots adventures that stir the souls of his companions. When the moon ascends the sky, heralding the arrival of twilight, Ben is often found amidst the camaraderie of taverns, regaling companions with tales of yore and sharing hearty laughter over flagons of ale. His jovial spirit, a beacon of mirth, illuminates even the darkest of nights, fostering bonds as sturdy as forged steel. Within this labyrinthine tapestry of existence, Ben stands as a troubadour, wielding both his guitar and his dice with equal finesse. His heart beats in rhythm with the songs of heroes, the strums of chords, and the clinking of tankards, forever etching his legend into the annals of this modern age.",
-        hometown: "Computer",
+        hometown: "SEI LDN 76",
         house: "Assembly"
     },
     {
@@ -690,7 +690,7 @@ export default [
             "The slaying of Sam666"
         ],
         biography: "In the lands of Westeros, a seasoned individual of 27 winters emerged from the revered halls of the Citadel at Sheffield Hallam University. During the defining years between 17 and 23, they honed their martial skills, claiming triumph in the battles of Mutual Combat and securing the esteemed title of University Champion. Beyond the physical conflicts that shaped their past, their journey led them to confront a more formidable adversary: the intricate world of software development. With the determination of a seasoned warrior, they ventured into the complexities of coding and programming, striving to conquer this daunting challenge and emerge victorious. Navigating the arenas of both physical prowess and intellectual pursuits, this individual embraced the teachings of resilience, determination, and adaptability. Their path through the ever-evolving landscapes of Westeros was marked by hard-won victories, earned through unyielding perseverance and an unswerving commitment to mastering life's multifaceted battles.",
-        hometown: "Computer",
+        hometown: "SEI LDN 76",
         house: "Assembly"
     },
     {
@@ -702,7 +702,7 @@ export default [
             "The slaying of Sam666"
         ],
         biography: "Dan, a figure of paradox, walks the beach at dawn, where the ocean's serenity mirrors his soul's calm, yet at dusk, his heart quickens to the chaotic rhythm of village raids, a tempest within his tranquil facade. With a stride as relentless as the tide, Dan traverses the shores, cherishing the serenity of endless sands underfoot. His eyes, the hue of stormy seas, reflect both the calm expanse of the horizon and the untamed fervor lurking beneath. He adorns himself in garments that bear the insignia of adventure, a fusion of rugged seafarer and the elegance of a nobleman. Amidst his longing for the whispers of the breeze, there exists a penchant for the uncharted. When the sun dips beyond the skyline, a different allure captivates his essence—an insatiable hunger for the thrill of raid and conquest. In the cloak of nightfall, Dan transforms, leading a band of free-spirited adventurers in plundering villages along the coast. His prowess in battle is unmatched, the swing of his blade mirroring the tempestuous fury of the ocean storms. The contrast between Dan's love for the tranquility of sandy shores and the adrenaline-fueled chaos of pillage and plunder paints a portrait of complexity. It's as if the calm of the beach soothes the tumultuous storms raging within him, offering a fleeting respite before he once again embarks on his daring escapades. Whispers amongst the coastal folk tell tales of this enigmatic figure—some sing praises of his gallantry, while others tremble at the mention of his name, haunted by the echoes of their pillaged past. Dan remains an enigma, a man tethered to the dualities of his nature, forever entwined with the eternal dance of peace and conquest along the West Shore's edge.",
-        hometown: "Computer",
+        hometown: "SEI LDN 76",
         house: "Assembly"
     },
     {
@@ -713,7 +713,7 @@ export default [
             "The great hacking of Sam's database security"
         ],
         biography: "In the halls of Cambridge, where wisdom thrives, there resides a silver-tongued scholar named Phil. His eloquence, nurtured by the prestigious university's ancient tomes, dances like wildfire in the winds of discourse. With a faithful companion, Otto the loyal hound, by his side, he weaves through cobblestone paths, his intellect a beacon among the academia. Yet, behind the refined facade lies a mischievous streak—a penchant for playful deception. Sam, an unwitting target, often finds himself entangled in Phil's whimsical pranks, each jest meticulously crafted to tickle the fine line between hilarity and harmless mischief. Tales abound in the hallowed halls of Cambridge of this erudite trickster, whose wit rivals the most cunning jesters of old, all while pursuing the elusive pursuit of knowledge.",
-        hometown: "Computer",
+        hometown: "SEI LDN 76",
         house: "Assembly"
     }
 ]
