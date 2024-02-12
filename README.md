@@ -1,53 +1,52 @@
-Project 3: GameOfThrones 
-FullStack ReadMe
+# Game Of Thrones Full Stack
 
-Description
+# Description
 This is a full-stack application that serves as a basic compendium for Game of Thrones. It consists of a back-end Express Framework API and a front-end React user interface that consumes the API with full C.R.U.D (create, read, update, delete) capabilities.
 
-Deployment link: https://gameofthronesfullstack-b965d7354f59.herokuapp.com/
+# Deployment link: https://gameofthronesfullstack-b965d7354f59.herokuapp.com/
 
-Timeframe & Working Team
+# Timeframe & Working Team
 This was a group project between:
 Dan Edmunds (https://github.com/danedmunds1), 
 Nysha Dzvoti (https://github.com/NyashaDZT), 
 Ben Kelly (https://github.com/benelliottkelly).
 This project was created between 7/12/23 and 15/12/23 inclusive.
 
-Technologies Used
+# Technologies Used
 Front-end: React, JavaScript, HTML, SASS, Bootstrap
 Back-end: Express.js
 Database: MongoDB
 Development Tools: Excalidraw, QuickDBD
 
-Brief
+# Brief
 Technical Requirements:
-Build a full-stack application by making your own backend and your own front-end
-Use an Express API to serve your data from a Mongo database
-Consume your API with a separate front-end built with React
-Be a complete product which most likely means multiple relationships and CRUD functionality for at least a couple of models
-Implement thoughtful user stories/wireframes that are significant enough to help you know which features are core MVP and which you can cut
-Have a visually impressive design to kick your portfolio up a notch and have something to wow future clients & employers
-Be deployed online so it's publicly accessible
+* Build a full-stack application by making your own backend and your own front-end
+* Use an Express API to serve your data from a Mongo database
+* Consume your API with a separate front-end built with React
+* Be a complete product which most likely means multiple relationships and CRUD functionality for at least a couple of models
+* Implement thoughtful user stories/wireframes that are significant enough to help you know which features are core MVP and which you can cut
+* Have a visually impressive design to kick your portfolio up a notch and have something to wow future clients & employers
+* Be deployed online so it's publicly accessible
 
 Necessary Deliverables:
-A working app hosted on the internet
-A link to your hosted working app in the URL section of your Github repo
-A git repository hosted on Github, with a link to your hosted project, and frequent commits dating back to the very beginning of the project
-A readme.md file with:
-An embedded screenshot of the app
-Explanations of the technologies used
-A couple paragraphs about the general approach you took
-Installation instructions for any dependencies
-Link to your user stories/wireframes – sketches of major views / interfaces in your application
-Link to your pitch deck/presentation – documentation of your wireframes, user stories, and proposed architecture
-Descriptions of any unsolved problems or major hurdles you had to overcome
+* A working app hosted on the internet
+* A link to your hosted working app in the URL section of your Github repo
+* A git repository hosted on Github, with a link to your hosted project, and frequent commits dating back to the very beginning of the project
+* A readme.md file with:
+* An embedded screenshot of the app
+* Explanations of the technologies used
+* A couple paragraphs about the general approach you took
+* Installation instructions for any dependencies
+* Link to your user stories/wireframes – sketches of major views / interfaces in your application
+* Link to your pitch deck/presentation – documentation of your wireframes, user stories, and proposed architecture
+* Descriptions of any unsolved problems or major hurdles you had to overcome
 
-Planning
+# Planning
 We began planning by deciding the topic of our API. After much discussion we landed on creating some sort of Game of Thrones compendium as this is a franchise that all group members had an interest in and good knowledge of. Furthermore, it would allow us to create multiple schemas in our API and make good use of referenced relationships, i.e. giving the houses schema access to the characters schema so we could display all the characters in a specific house in the house’s index page.
 We created a detailed wireframe outlining which schemas would have referenced relationships with which other schemas. It also included the layout of the index pages, the layout of the single display pages, and the outline of the profile section, including the ability to register, login, and logout.
 Finally we took all of our ideas and separated them into necessary deliverables for the project, and stretch goals. We decided to complete the necessary deliverables first and then, if we had sufficient time, start working on the stretch goals. One of these goals was to add an interactive map to the places index page, allowing users to click points plotted on a map and navigate to the single display page for each place.
 
-Build/Code Process
+# Build/Code Process
 Back-End
 We started by creating the Express API together because the process was still new to us, and so we thought going over it again from scratch would be a valuable learning opportunity. I was typing the code while Ben and Nyasha gave their input on how our back-end should be structured, i.e. where we wanted our referenced relationships to be. By the end of the first day our API was able to serve data from our Mongo Database via Insomnia, and therefore the next day we could get to work on the front-end to allow users to interact with the API.
 
@@ -188,22 +187,22 @@ Finally the results are alphabetised by a function used by all documents
 Dropdown Filters
 The dropdowns essentially populate the search bar based on the option that is clicked, and the dropdown options are populated by accessing the loader data and creating a new array form unique instances of places and houses (though of course this differs between which type of data is being loaded)
 
-Challenges
+# Challenges
 The primary challenge I faced was finding a way to test the Regex pattern found in the search bar against not only the name of the items being rendered, but also against the other related information stored inside the items. Prior to this project I had only ever tested one or two surface level values against this pattern so this was a new and difficult endeavor. This was such a challenge as I did not know how to test the Regex pattern against the name of the item, then also loop through arrays of items inside the item and test each of these against the same Regex pattern. Making use of online resources and the teaching team at General Assembly I found the correct syntax for accomplishing this and the filters now function very well.
 
-Wins
+# Wins
 Overcoming and finding the solution to the aforementioned filtering challenge as it took a lot of time to work through and I wasn’t sure if it was something I could even do. But I used a combination of online resources and the teaching assistants at GA to complete it, and I’m glad I did because it works very well and makes good use of the referenced relationships between our models.
 Another win was the ability to work with Ben and Nyasha throughout this project. I really enjoyed the teamworking aspect of this project and I certainly lucked out being paired with my teammates. After this experience, group projects are now something I hope to participate more throughout my career.
 
-Key Learnings/Takeaways
+# Key Learnings/Takeaways
 After this project I am a lot more confident working with filters and search bars due to the time spent overcoming the aforementioned challenges.
 I am also more competent at using online resources to fix issues with my code as I am more aware of the sort of information to look for and how to log out each step of a process I am trying to create to find where the error is occurring.
 After completing a group project I believe it is my favourite way to work. It was very useful to have teammates to go to with questions about ways to solve an issue as they will already possess a good understanding of the section I am working on. It was also a lot more pleasant to have company while coding as it made me feel more like part of a team, and I had people to chat with during down time. Finally, the fact that other team members were working on other aspects of the site meant that I had more time to work on my parts and complete them to a higher standard than if I had to do it all myself in the same time frame.
 
-Bugs
+# Bugs
 There is a reactivity issue that can occur when a user is creating or editing a character and their token has expired. If their token expires while they are on the site, when they try to navigate to character creation or character edit, a modal will appear telling them to log in again, but if the token expires while they are on the page, no such modal appears. Therefore when a user tries to submit their creation or change, the inputs will return to their default state. No creation or update will take place, but there is also no message returned that tells the user this. Luckily this is an easy fix but as of writing this ReadMe, the issue still remains.
 
-Future Improvements
+# Future Improvements
 I wanted to create an index page that could display all items at the same time and have working filters like the other indexes. Users would be able to search for any place, character, or house using the search bar and dropdowns, and the page would return whatever item they were searching for, alongside other relevant items. I.e. if a user searched “Stark”, the page would return House Stark, any Stark characters, and any places occupied by the Starks.
 I would also like to include more documents for other types of information pertaining to Game of Thrones, such as wildlife, battles, eras, etc. Extremely comprehensive compendiums already exist for Game of Thrones and they manage to store a great amount of information, so really we are only just scratching the surface of what is possible with our project.
 
