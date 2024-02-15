@@ -3,7 +3,8 @@
 # Description
 This is a full-stack application that serves as a basic compendium for Game of Thrones. It consists of a back-end Express Framework API and a front-end React user interface that consumes the API with full C.R.U.D (create, read, update, delete) capabilities.
 
-# Deployment link: https://gameofthronesfullstack-b965d7354f59.herokuapp.com/
+# Deployment link
+https://gameofthronesfullstack-b965d7354f59.herokuapp.com/
 
 # Timeframe & Working Team
 This was a group project between:
@@ -19,7 +20,7 @@ Database: MongoDB
 Development Tools: Excalidraw, QuickDBD
 
 # Brief
-Technical Requirements:
+## Technical Requirements:
 * Build a full-stack application by making your own backend and your own front-end
 * Use an Express API to serve your data from a Mongo database
 * Consume your API with a separate front-end built with React
@@ -28,18 +29,18 @@ Technical Requirements:
 * Have a visually impressive design to kick your portfolio up a notch and have something to wow future clients & employers
 * Be deployed online so it's publicly accessible
 
-Necessary Deliverables:
+## Necessary Deliverables:
 * A working app hosted on the internet
 * A link to your hosted working app in the URL section of your Github repo
 * A git repository hosted on Github, with a link to your hosted project, and frequent commits dating back to the very beginning of the project
 * A readme.md file with:
-* An embedded screenshot of the app
-* Explanations of the technologies used
-* A couple paragraphs about the general approach you took
-* Installation instructions for any dependencies
-* Link to your user stories/wireframes – sketches of major views / interfaces in your application
-* Link to your pitch deck/presentation – documentation of your wireframes, user stories, and proposed architecture
-* Descriptions of any unsolved problems or major hurdles you had to overcome
+  * An embedded screenshot of the app
+  * Explanations of the technologies used
+  * A couple paragraphs about the general approach you took
+  * Installation instructions for any dependencies
+  * Link to your user stories/wireframes – sketches of major views / interfaces in your application
+  * Link to your pitch deck/presentation – documentation of your wireframes, user stories, and proposed architecture
+  * Descriptions of any unsolved problems or major hurdles you had to overcome
 
 # Planning
 We began planning by deciding the topic of our API. After much discussion we landed on creating some sort of Game of Thrones compendium as this is a franchise that all group members had an interest in and good knowledge of. Furthermore, it would allow us to create multiple schemas in our API and make good use of referenced relationships, i.e. giving the houses schema access to the characters schema so we could display all the characters in a specific house in the house’s index page.
@@ -47,10 +48,10 @@ We created a detailed wireframe outlining which schemas would have referenced re
 Finally we took all of our ideas and separated them into necessary deliverables for the project, and stretch goals. We decided to complete the necessary deliverables first and then, if we had sufficient time, start working on the stretch goals. One of these goals was to add an interactive map to the places index page, allowing users to click points plotted on a map and navigate to the single display page for each place.
 
 # Build/Code Process
-Back-End
+## Back-End
 We started by creating the Express API together because the process was still new to us, and so we thought going over it again from scratch would be a valuable learning opportunity. I was typing the code while Ben and Nyasha gave their input on how our back-end should be structured, i.e. where we wanted our referenced relationships to be. By the end of the first day our API was able to serve data from our Mongo Database via Insomnia, and therefore the next day we could get to work on the front-end to allow users to interact with the API.
 
-Reactivity Features
+## Reactivity Features
 As this was a group project we decided to split this work between the group members, allowing multiple sections of the front-end to progress at the same time. I was given the home page, the index pages, and the index filters to work on, and after these were completed I then helped to finish the create and edit character functionality. Finally I added some finishing touches around the site, as detailed below.
 Reactive Components:
 A modal that pops up when you click the logout button asking if you are sure you want to logout
@@ -59,26 +60,24 @@ Other Finishing Touches:
 Changing the input fields for house and home town in the create and edit character pages from text to dropdowns populated by an API call
 Writing a function that checks whether a user’s token has expired when they try to create or edit a character. If it has expired a modal will pop up informing the user to login again, and navigate to the login page
 
-Home Page
+## Home Page
 The home page does not make use of any loaders or actions related to our API, and instead simply acts as a hub to display the following information:
 The outline and purpose of the project
 The github links of those in the project group
 The sources for images and descriptions we have used
 The home page also includes links to the index pages for characters, locations, and houses found within the Game of Thrones fiction.
 
-Index Pages
+## Index Pages
 The index pages render all items of a given model on one page for users to scroll and/or filter through. Each item is organised into a card that contains an image, a title, and sometimes a brief description, and each card is a link to the single view for that item. It was fairly straightforward to render the relevant information for each item on the index pages as we has planned for this when creating the back-end. 
 
-Filters
+## Filters
 Using the Correct Filters
 I wanted to create a filter component that could be used on all three index pages and that would allow users to search for items using the item’s name and other related information. For example, when on the places index, a user could type the name of a place into the search bar to return that place, but they could also enter the name of a house and the filters would return every place that has been occupied by that house. Users could also enter the name of a character, and the hometown of that character would be rendered.
 As I wanted the filters to be a single component I wrapped the filter logic in an if statement that checks whether places is true (whether the place items are being rendered), if place is false it will check characters and houses until it finds what data has been loaded.
 
+```
  const [places, setPlaces] = useState([])
  const [filteredPlaces, setFilteredPlaces] = useState([])
-
-
-
 
   useEffect(() => {
     setPlaces(location)
@@ -86,7 +85,6 @@ As I wanted the filters to be a single component I wrapped the filter logic in a
   return (
 <Filter places={places} setFilteredPlaces={setFilteredPlaces} filteredPlaces={filteredPlaces} />
 )
-
 
 if (places) {
 // Places Filter logic
@@ -96,8 +94,9 @@ if (places) {
 // Houses Filter Logic
 } else {
 // Condition for no data loaded }
+```
 
-Filter Logic
+## Filter Logic
 The filter logic took the most time to complete for reasons explained in greater detail in the challenges section of this ReadMe, but after lots of research and trial and error, this is how the filters work:
 First the pattern is set to the contents of the search bar
 Then filteredArray is initialised as a let variable, as the filtered array will differ depending on what index page is being rendered
@@ -108,19 +107,17 @@ If there is at least one referenced relationship with a character that lives in 
 Then the code test for the place name, the house that occupies it, and any characters that live there
 Finally the results are alphabetised by a function used by all documents
 
+```
  useEffect(() => {
-
 
         const pattern = new RegExp(filters.search, 'i')
         let filteredArray
         if (places) {
             filteredArray = places.filter(place => {
 
-
                 if (place.charactersInPlace.length === 0) {
                     return pattern.test(place.name) || pattern.test(place.occupiedBy)
                 }
-
 
                 else if (place.charactersInPlace.length > 0) {
                     const filtArr = place.charactersInPlace.filter(char => {
@@ -128,33 +125,23 @@ Finally the results are alphabetised by a function used by all documents
                     })
                     return pattern.test(place.name) || pattern.test(place.occupiedBy) || filtArr.length
                 }
-
-
             })
 
-
             setFilteredPlaces(alphabetiseIndex(filteredArray, 'name'))
-
 
             // Create Places DropDown for Places
             if (places.length > 0 && placesDropDown.length === 0) {
                 const placeArray = [...new Set(places.map(place => place.name))]
 
-
                 setPlacesDropDown(alphabetiseDropDown(placeArray))
             }
-
 
             // Create Houses DropDown for Places
             if (places.length > 0 && housesDropDown.length === 0) {
                 const uniqueOccupants = Array.from(new Set(places.flatMap(place => place.occupiedBy)));
 
-
                 setHousesDropDown(alphabetiseDropDown(uniqueOccupants))
             }
-
-
-
 
         } else if (houses) {
 		// House Logic
@@ -162,13 +149,7 @@ Finally the results are alphabetised by a function used by all documents
             // Character Logic
         }
 
-
-
-
     }, [filters, places, setFilteredPlaces, (same for houses and characters)])
-
-
-
 
 // Alphabetise Function
     function alphabetiseDropDown(arrayName) {
@@ -179,12 +160,9 @@ Finally the results are alphabetised by a function used by all documents
         })
         return alphabet
     }
+```
 
-
-
-
-
-Dropdown Filters
+## Dropdown Filters
 The dropdowns essentially populate the search bar based on the option that is clicked, and the dropdown options are populated by accessing the loader data and creating a new array form unique instances of places and houses (though of course this differs between which type of data is being loaded)
 
 # Challenges
