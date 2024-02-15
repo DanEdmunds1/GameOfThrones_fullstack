@@ -14,10 +14,10 @@ Ben Kelly (https://github.com/benelliottkelly).
 This project was created between 7/12/23 and 15/12/23 inclusive.
 
 # Technologies Used
-Front-end: React, JavaScript, HTML, SASS, Bootstrap
-Back-end: Express.js
-Database: MongoDB
-Development Tools: Excalidraw, QuickDBD
+## Front-end: React, JavaScript, HTML, SASS, Bootstrap
+## Back-end: Express.js
+## Database: MongoDB
+## Development Tools: Excalidraw, QuickDBD
 
 # Brief
 ## Technical Requirements:
