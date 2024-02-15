@@ -183,8 +183,3 @@ There is a reactivity issue that can occur when a user is creating or editing a 
 # Future Improvements
 I wanted to create an index page that could display all items at the same time and have working filters like the other indexes. Users would be able to search for any place, character, or house using the search bar and dropdowns, and the page would return whatever item they were searching for, alongside other relevant items. I.e. if a user searched “Stark”, the page would return House Stark, any Stark characters, and any places occupied by the Starks.
 I would also like to include more documents for other types of information pertaining to Game of Thrones, such as wildlife, battles, eras, etc. Extremely comprehensive compendiums already exist for Game of Thrones and they manage to store a great amount of information, so really we are only just scratching the surface of what is possible with our project.
-
-
-
-
-
